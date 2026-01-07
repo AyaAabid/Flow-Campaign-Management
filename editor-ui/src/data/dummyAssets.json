@@ -1,0 +1,226 @@
+[
+  {
+    "id": "asset_001",
+    "name": "Times Square Billboard",
+    "assetName": "TSQ-001",
+    "title": "Times Square Digital Billboard",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Times Square",
+    "network": "Clear Channel",
+    "meta": "Premium location in Manhattan",
+    "coords": {
+      "lat": 40.7580,
+      "lng": -73.9855
+    },
+    "coordinates": {
+      "lat": 40.7580,
+      "lng": -73.9855
+    },
+    "latLng": {
+      "lat": 40.7580,
+      "lng": -73.9855
+    },
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_002",
+    "name": "Piccadilly Circus Screen",
+    "assetName": "PIC-002",
+    "title": "Piccadilly Circus Digital Screen",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Piccadilly Circus",
+    "network": "Ocean Outdoor",
+    "meta": "Iconic London location",
+    "coords": {
+      "lat": 51.5102,
+      "lng": -0.1340
+    },
+    "coordinates": {
+      "lat": 51.5102,
+      "lng": -0.1340
+    },
+    "latLng": {
+      "lat": 51.5102,
+      "lng": -0.1340
+    },
+    "resolution": {
+      "width": 3840,
+      "height": 2160
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_003",
+    "name": "Shibuya Crossing Display",
+    "assetName": "SHB-003",
+    "title": "Shibuya Crossing Digital Display",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Shibuya Crossing",
+    "network": "Dentsu",
+    "meta": "Busy intersection in Tokyo",
+    "coords": {
+      "lat": 35.6598,
+      "lng": 139.7006
+    },
+    "coordinates": {
+      "lat": 35.6598,
+      "lng": 139.7006
+    },
+    "latLng": {
+      "lat": 35.6598,
+      "lng": 139.7006
+    },
+    "resolution": {
+      "width": 2560,
+      "height": 1440
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_004",
+    "name": "Champs-Élysées Panel",
+    "assetName": "CHM-004",
+    "title": "Champs-Élysées Digital Panel",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Champs-Élysées",
+    "network": "JCDecaux",
+    "meta": "Famous Parisian avenue",
+    "coords": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "coordinates": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "latLng": {
+      "lat": 48.8566,
+      "lng": 2.3522
+    },
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_005",
+    "name": "Dubai Mall Screen",
+    "assetName": "DUB-005",
+    "title": "Dubai Mall Digital Screen",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Dubai Mall",
+    "network": "Emaar",
+    "meta": "Luxury shopping destination",
+    "coords": {
+      "lat": 25.1972,
+      "lng": 55.2796
+    },
+    "coordinates": {
+      "lat": 25.1972,
+      "lng": 55.2796
+    },
+    "latLng": {
+      "lat": 25.1972,
+      "lng": 55.2796
+    },
+    "resolution": {
+      "width": 3840,
+      "height": 2160
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_006",
+    "name": "Sydney Opera House Display",
+    "assetName": "SYD-006",
+    "title": "Sydney Opera House Digital Display",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Sydney Opera House",
+    "network": "QMS",
+    "meta": "Iconic Australian landmark",
+    "coords": {
+      "lat": -33.8568,
+      "lng": 151.2153
+    },
+    "coordinates": {
+      "lat": -33.8568,
+      "lng": 151.2153
+    },
+    "latLng": {
+      "lat": -33.8568,
+      "lng": 151.2153
+    },
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_007",
+    "name": "Toronto Eaton Centre Screen",
+    "assetName": "TOR-007",
+    "title": "Toronto Eaton Centre Digital Screen",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Toronto Eaton Centre",
+    "network": "Pattison",
+    "meta": "Major shopping center in Toronto",
+    "coords": {
+      "lat": 43.6532,
+      "lng": -79.3832
+    },
+    "coordinates": {
+      "lat": 43.6532,
+      "lng": -79.3832
+    },
+    "latLng": {
+      "lat": 43.6532,
+      "lng": -79.3832
+    },
+    "resolution": {
+      "width": 2560,
+      "height": 1440
+    },
+    "isActive": true
+  },
+  {
+    "id": "asset_008",
+    "name": "Berlin Alexanderplatz Panel",
+    "assetName": "BER-008",
+    "title": "Berlin Alexanderplatz Digital Panel",
+    "type": "DOOH",
+    "assetType": "Digital",
+    "venue": "Alexanderplatz",
+    "network": "Ströer",
+    "meta": "Central square in Berlin",
+    "coords": {
+      "lat": 52.5219,
+      "lng": 13.4132
+    },
+    "coordinates": {
+      "lat": 52.5219,
+      "lng": 13.4132
+    },
+    "latLng": {
+      "lat": 52.5219,
+      "lng": 13.4132
+    },
+    "resolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "isActive": true
+  }
+]
