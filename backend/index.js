@@ -14,9 +14,16 @@ import dashRoutes from "./routes/dashRoutes.js";
 
 dotenv.config();
 connectDB();
-
+//origin: true, credentials: true
 const app = express();
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({
+    origin: "*",
+    methods: ["POST", "GET", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+    credentials: true,
+  }),
+);
 app.use(express.json());
 
 // Health
