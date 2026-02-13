@@ -1,6 +1,6 @@
 // backend/controllers/campaignController.js
 import Campaign from "../models/Campaign.js";
-import { computeStatus, needsStatusUpdate } from "../utils/campaignStatus.js";
+import { computeStatus, needsStatusUpdate } from "../utils/CampaignStatus.js";
 
 // Create
 export const createCampaign = async (req, res) => {
