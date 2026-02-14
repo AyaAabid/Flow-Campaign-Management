@@ -18,8 +18,8 @@ connectDB();
 const app = express();
 app.use(
   cors({
-    origin: true,
-    credentials: true,
+    origin: 'https://flow-api-chi.vercel.app',
+   
   }),
 );
 
