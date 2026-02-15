@@ -29,11 +29,11 @@ import path from "path";
 import fs from "fs";
 
 // Use /tmp/ for serverless (Lambda), ./uploads for local development
-const uploadsDir =
-  process.env.NODE_ENV === "production"
+const uploadsDir = "/tmp/uploads";
+ /* process.env.NODE_ENV === "production"
     ? "/tmp/uploads"
     : path.join(process.cwd(), "uploads");
-
+*/
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });
 }
