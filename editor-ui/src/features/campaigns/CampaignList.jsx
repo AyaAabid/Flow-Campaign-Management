@@ -55,7 +55,9 @@ let MapPreview = ({ coords = null, height = 220 }) => (
       background: "#fafafa",
     }}
   >
-    {coords ? `Coordinates: ${coords.lat}, ${coords.lng}` : "No location coords"}
+    {coords
+      ? `Coordinates: ${coords.lat}, ${coords.lng}`
+      : "No location coords"}
   </div>
 );
 
@@ -77,7 +79,11 @@ try {
     return (
       <div style={{ height, border: "1px solid #e6e6e6" }}>
         return (
-        <MapContainer center={center} zoom={coords ? 13 : 6} style={{ height: "100%", width: "100%" }}>
+        <MapContainer
+          center={center}
+          zoom={coords ? 13 : 6}
+          style={{ height: "100%", width: "100%" }}
+        >
           <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
           {coords ? <Marker position={[coords.lat, coords.lng]} /> : null}
         </MapContainer>
@@ -100,14 +106,16 @@ export default function CampaignsList() {
   // modal state for locations preview
   const [locationsModalOpen, setLocationsModalOpen] = useState(false);
   const [modalCampaign, setModalCampaign] = useState(null);
-  const [modalHighlightedLocation, setModalHighlightedLocation] = useState(null);
+  const [modalHighlightedLocation, setModalHighlightedLocation] =
+    useState(null);
 
   const load = async () => {
     try {
       setLoading(true);
       const items = await fetchCampaigns();
       const normalized = (items || []).map((c, idx) => {
-        const internalId = c.internalId || c._id || String(idx).padStart(5, "0");
+        const internalId =
+          c.internalId || c._id || String(idx).padStart(5, "0");
         // const venueTypes =
         //   (Array.isArray(c.locations) && c.locations.length > 0
         //     ? Array.from(new Set(c.locations.map((l) => l.venueType || l.type || "Unknown")))
@@ -155,13 +163,18 @@ export default function CampaignsList() {
           (r.campaign_name || "").toLowerCase().includes(q) ||
           (r.campaign_type || "").toLowerCase().includes(q) ||
           (r.submittedBy || "").toLowerCase().includes(q) ||
-          (`${r.internalId}` || "").toLowerCase().includes(q)
+          (`${r.internalId}` || "").toLowerCase().includes(q),
       );
     }
     return data;
   }, [rows, status, search]);
 
-  const manualStatuses = ["Draft", "Waiting_for_approval", "Ready_to_go", "Aborted"];
+  const manualStatuses = [
+    "Draft",
+    "Waiting_for_approval",
+    "Ready_to_go",
+    "Aborted",
+  ];
 
   const handleStatusChange = async (id, val) => {
     try {
@@ -256,7 +269,9 @@ export default function CampaignsList() {
         );
       },
     },
+
     // {
+
     //   title: "Venue Types",
     //   dataIndex: "venueTypes",
     //   width: 140,
@@ -318,7 +333,6 @@ export default function CampaignsList() {
         ];
         return (
           <Space direction="horizontal">
-          
             <Dropdown
               menu={{
                 items: items.map((it) => ({
@@ -350,7 +364,10 @@ export default function CampaignsList() {
             style={{ width: 200 }}
             value={status}
             onChange={setStatus}
-            options={[{ label: "All Status", value: "All Status" }, ...CAMPAIGN_STATUS_OPTIONS.filter((o) => !o.disabled)]}
+            options={[
+              { label: "All Status", value: "All Status" },
+              ...CAMPAIGN_STATUS_OPTIONS.filter((o) => !o.disabled),
+            ]}
           />
           <Input.Search
             allowClear
@@ -359,7 +376,11 @@ export default function CampaignsList() {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <Button type="primary" icon={<PlusOutlined />} onClick={() => navigate("/campaigns/new")}>
+          <Button
+            type="primary"
+            icon={<PlusOutlined />}
+            onClick={() => navigate("/campaigns/new")}
+          >
             New Campaign
           </Button>
         </div>
@@ -378,7 +399,11 @@ export default function CampaignsList() {
 
       <Modal
         visible={locationsModalOpen}
-        title={modalCampaign ? `Locations for ${modalCampaign.campaign_name || modalCampaign.name || ""}` : "Locations"}
+        title={
+          modalCampaign
+            ? `Locations for ${modalCampaign.campaign_name || modalCampaign.name || ""}`
+            : "Locations"
+        }
         onCancel={() => setLocationsModalOpen(false)}
         footer={
           <Space>
@@ -399,14 +424,18 @@ export default function CampaignsList() {
                     onClick={() => setModalHighlightedLocation(loc)}
                   >
                     <List.Item.Meta
-                      title={loc.name || loc.assetName || loc.asset?.name || "Asset"}
+                      title={
+                        loc.name || loc.assetName || loc.asset?.name || "Asset"
+                      }
                       description={
                         <>
                           <div style={{ fontSize: 12, color: "#666" }}>
                             {loc.network || loc.meta || ""}
                           </div>
                           <div style={{ fontSize: 12, color: "#666" }}>
-                            {loc.coords ? `Coords: ${loc.coords.lat}, ${loc.coords.lng}` : "No coordinates"}
+                            {loc.coords
+                              ? `Coords: ${loc.coords.lat}, ${loc.coords.lng}`
+                              : "No coordinates"}
                           </div>
                         </>
                       }
@@ -414,12 +443,34 @@ export default function CampaignsList() {
                     <div>
                       {loc.previewCreative ? (
                         /\.(jpg|jpeg|png|gif)$/i.test(loc.previewCreative) ? (
-                          <img src={loc.previewCreative} alt="" style={{ width: 120, height: 70, objectFit: "cover" }} />
+                          <img
+                            src={loc.previewCreative}
+                            alt=""
+                            style={{
+                              width: 120,
+                              height: 70,
+                              objectFit: "cover",
+                            }}
+                          />
                         ) : (
-                          <video src={loc.previewCreative} style={{ width: 120, height: 70 }} />
+                          <video
+                            src={loc.previewCreative}
+                            style={{ width: 120, height: 70 }}
+                          />
                         )
                       ) : (
-                        <div style={{ width: 120, height: 70, background: "#fafafa", border: "1px solid #eee", display: "flex", alignItems: "center", justifyContent: "center", color: "#999" }}>
+                        <div
+                          style={{
+                            width: 120,
+                            height: 70,
+                            background: "#fafafa",
+                            border: "1px solid #eee",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            color: "#999",
+                          }}
+                        >
                           No preview
                         </div>
                       )}
@@ -430,10 +481,16 @@ export default function CampaignsList() {
             </div>
 
             <div style={{ width: 360 }}>
-              <div style={{ marginBottom: 8, fontWeight: 600 }}>Map / Preview</div>
-              <MapPreview coords={modalHighlightedLocation?.coords || null} height={360} />
+              <div style={{ marginBottom: 8, fontWeight: 600 }}>
+                Map / Preview
+              </div>
+              <MapPreview
+                coords={modalHighlightedLocation?.coords || null}
+                height={360}
+              />
               <div style={{ marginTop: 8, fontSize: 12, color: "#666" }}>
-                Click a location on the left to preview it on the map. Creatives assigned to locations are shown as small previews.
+                Click a location on the left to preview it on the map. Creatives
+                assigned to locations are shown as small previews.
               </div>
             </div>
           </div>
