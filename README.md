@@ -87,3 +87,8 @@ The application will open at `http://localhost:5173`
 A live demo is available at: [Click here](https://flow-frontend-pied.vercel.app/)
 
 **Note:** The deployment version has CORS configuration issues that im trying to fix, but the local environemment is fully stable.
+
+## Demo Credentials
+
+- **Username**: Jhon_editor
+- **Password**: jhon@123
